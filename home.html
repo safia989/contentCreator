@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>معرض الاعمال</title>
+        <!-- Render All Elements Normally -->
+        <link rel="stylesheet" href="css/normalize.css" />
+        <!-- Font Awesome Library -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <!-- Main Template CSS File -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&#038;display=swap" rel="stylesheet" />
+     
+    </head>
+    <style>
+
+        /* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
+}
+/* End Variables */
+/* strat global role*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+  scroll-behavior:smooth;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+/* end global role*/
+/*startr component*/
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
+}
+/*end component*/
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }}
+    /* end global role*/
+    /* satart header */
+    header{
+/*       position: absolute;
+ */      left: 0;
+      width: 100%;
+      z-index: 2;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+       min-height: 97px; 
+    }
+    header .container::after { /* هذا الخط الي تحت */
+      content: "";
+      position: absolute;
+      height: 1px;
+      background-color: #fff;
+      bottom: 0;
+      width: calc(100% - 30px);
+      left: 15px;
+    }
+   /*  header .logo img{
+        width: 50px;
+  
+    } */
+    header nav{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    header nav .toggle-menu{
+        color:rgb(7, 6, 6);
+        font-size: 22px;
+    }
+   
+    @media (min-width:768px){
+      header nav .toggle-menu{
+          display: none;
+      } 
+    }
+    header nav ul{
+        display: flex;
+        list-style-type: none;
+    }
+    @media (max-width:767px){
+    header nav ul{
+          display: none;
+      }
+      header nav .toggle-menu:hover + ul{
+ /* 5555555555555555555555555555 */
+        /* position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  display: flex;
+  align-items: center;
+  /* 5555555555555555555555555555 */
+  /*justify-content: center; */
+          /* display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 50%;
+      color:rgb(8, 8, 8);
+       background-color: rgb(0 0 0 / 20%); */  /*النسبة الي بعد اللون يقصد بها الشفافية  */
+      }  
+    
+
+
+
+
+
+
+      
+      header nav ul li a {
+          padding: 15px !important;
+        
+        } 
+ 
+      
+      }
+    
+    header nav ul li a{
+        color: #000;
+        display: block;
+        font-size: 14px;
+        text-decoration: none;
+        transition: 0.3;
+        padding: 40px 10px;
+        z-index:2;
+        position: relative;
+        
+    }
+    header nav ul li a.active,
+    header nav ul li a:hover{
+       font-weight: bold;
+/*         border-bottom: 1px solid var(--main-color);
+ */        
+    }
+   /*  header nav .form{
+        width: 40px;
+        height: 30px;
+        position: relative;
+        margin-left: 30px;
+        color: white;
+        border-left: 1px solid rgb(243, 20, 20);
+       
+    }
+    header nav .form i {
+      color: rgb(209, 25, 25);
+      position: absolute;
+      font-size: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    } */
+     /* end header */
+    </style>
+    
+    <body>
+        <header>
+            <div class="container">
+             <p class="logo">Osama Asadi <span>Content Creator</span></p>
+           <!--   <a href="#" class="logo"><img src="images/logo.png" alt="logo"></a>
+            -->  <nav>
+             <div class="button">
+                 <i class="fas fa-bars toggle-menu"> </i>
+                 </div>
+                 <ul>
+                     <li><a class="active" href="index.html">My Works</a></li>
+                    
+                     <li><a href="about.html">About Me</a></li>
+                   
+                     <li><a href="contact.html">Contact me</a></li>
+                 </ul>
+                 <!-- <div class="form"> 
+                     <i class="fas fa-search"></i>
+                 </div> -->
+             </nav>
+             </div>
+             </header>
+             <h3 class="heading">video gallery</h3>
+             <div class="container">
+         
+                 <div class="main-video">
+                     <div class="video">
+                         <video src="images/Waves.mp4" controls muted autoplay width="300px" height="420px"></video>
+                         <h3 class="title">1.0 Video title Goes Here</h3>
+                     </div>
+                 </div>
+         
+                 <div class="video-list">
+                     <div class="vid active">
+                         <video src="images/Waves.mp4" controls muted width="100px" height="120px"></video>
+                         <h3 class="title">1.0 Video title Goes Here</h3>
+                     </div>
+         
+                     <!-- <div class="vid">
+                         <video src="images/Waves.mp4" controls muted></video>
+                         <h3 class="title">2.0 Video title Goes Here</h3>
+                     </div> -->
+                     <div class="vid">
+                         <video src="images/1.mp4" controls muted width="100px" height="120px"></video>
+                         <h3 class="title">2.0 Video title Goes Here</h3>
+                     </div>
+                     <div class="vid">
+                         <video src="images/2.mp4" controls muted width="100px" height="120px"></video>
+                         <h3 class="title">3.0 Video title Goes Here</h3>
+                     </div>
+                     <div class="vid">
+                         <video src="images/3.mp4" controls muted width="100px" height="120px"></video>
+                         <h3 class="title">4.0 Video title Goes Here</h3>
+                     </div>
+                     <div class="vid">
+                         <video src="images/4.mp4" controls muted width="100px" height="120px"></video>
+                         <h3 class="title">5.0 Video title Goes Here</h3>
+                     </div>
+                     <div class="vid">
+                         <video src="images/5.mp4" controls muted width="100px" height="120px"></video>
+                         <h3 class="title">6.0 Video title Goes Here</h3>
+                     </div>
+                     <div class="vid">
+                         <video src="images/6.mp4" controls muted width="100px" height="120px"></video>
+                         <h3 class="title">7.0 Video title Goes Here</h3>
+                     </div>
+                 </div>
+             </div>
+             <footer class="content-footer">
+              <p>  All Right Reserved to Pure_technology </p>
+              
+            
+          </footer>
+             <script>
+         let listVideo=document.querySelectorAll('.video-list .vid');
+         let mainVideo=document.querySelector('.main-video video');
+         let title=document.querySelector('.main-video .title');
+         
+         listVideo.forEach(video =>{
+             video.onclick = () =>{
+                 listVideo.forEach(vid => vid.classList.remove('actve'))  ;
+                 video.classList.add('active');
+                 if(video.classList.contains('active')){
+                     let src=video.children[0].getAttribute('src');
+                     mainVideo.src=src;
+                     let text=video.children[1].innerHTML;
+                     title.innerHTML=text;
+                 };
+             };
+         });
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+             </script>
+         </body>
+         </html>
+    
